@@ -49,10 +49,14 @@ class _ParentPageState extends State<ParentPage> {
             child: Text("normal"),
             onPressed: () => {},
           ),
+
+
           new IconButton(
             icon: Icon(Icons.thumb_up),
             onPressed: () => {},
           ),
+
+          // 纯扁平按钮
           new FlatButton(
             color: Colors.blue,
             highlightColor: Colors.blue[700],
@@ -62,6 +66,8 @@ class _ParentPageState extends State<ParentPage> {
             shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
             onPressed: () => {},
           ),
+
+          // 带质感以及默认阴影的按钮
           new RaisedButton(
             color: Colors.blue,
             highlightColor: Colors.blue[700],
@@ -72,7 +78,7 @@ class _ParentPageState extends State<ParentPage> {
             onPressed: () => {},
           ),
 
-          //
+          // 阴影状态
           new RaisedButton(
             color: Colors.blue,
             highlightColor: Colors.blue[700],

@@ -57,7 +57,7 @@ class _ParentPageState extends State<ParentPage> {
             'Hello world',
             textScaleFactor: 1.5, // 文本比例
             style: TextStyle(
-              fontFamily: 'Kaiju'
+              fontFamily: 'Kaiju' // 自定义字体 具体查看 文档
             ),
           ),
           new Text(

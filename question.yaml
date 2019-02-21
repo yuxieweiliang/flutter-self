@@ -1,0 +1,22 @@
+# Could not get resource 'https://jcenter.bintray.com/com/google/guava/guava/19.0/guava-19.0.jar'.
+`
+buildscript {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        google()
+        jcenter()
+    }
+    ...
+ }
+ ...
+allprojects {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        mavenCentral()
+        google()
+        jcenter()
+    }
+}
+`
+
+

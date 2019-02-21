@@ -1,0 +1,23 @@
+# Could not get resource 'https://jcenter.bintray.com/com/google/guava/guava/19.0/guava-19.0.jar'.
+`
+ListView({
+  ...
+  //可滚动widget公共参数
+  Axis scrollDirection = Axis.vertical,
+  bool reverse = false,
+  ScrollController controller,
+  bool primary,
+  ScrollPhysics physics,
+  EdgeInsetsGeometry padding,
+
+  //ListView各个构造函数的共同参数
+  double itemExtent,
+  bool shrinkWrap = false,
+  bool addAutomaticKeepAlives = true,
+  bool addRepaintBoundaries = true,
+  double cacheExtent,
+
+  //子widget列表
+  List<Widget> children = const <Widget>[],
+})
+`

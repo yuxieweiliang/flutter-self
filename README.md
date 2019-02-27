@@ -42,9 +42,9 @@ samples, guidance on mobile development, and a full API reference.
 
 
 打包:
-# 首先创建 key.jks
+## 首先创建 key.jks
 keytool -genkey -v -keystore path/key.jks -keyalg RSA -keysize 2048 -validity
-# 创建 key.properties
+## 创建 key.properties
 <app dir>/android/key.properties
 
     storePassword= # 创建 key.jks 时，输入的密码

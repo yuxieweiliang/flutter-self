@@ -131,8 +131,6 @@ class _MyHomePageState extends State<MyHomePage> {
               tiles: tiles,
             ).toList();
 
-
-            print(divided);
             return new Scaffold(
               appBar: new AppBar(title: new Text('Save Suggestions')),
               body: new ListView(

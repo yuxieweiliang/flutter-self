@@ -38,10 +38,13 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
+## 运行实例
+    flutter run ./lib/01_counter/app.dart
 
 
 
-打包:
+
+> 打包:
 ## 首先创建 key.jks
 keytool -genkey -v -keystore path/key.jks -keyalg RSA -keysize 2048 -validity
 ## 创建 key.properties

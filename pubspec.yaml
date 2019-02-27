@@ -22,6 +22,8 @@ dependencies: # ……的其他包或插件
 
   # 新添加的包，添加完成后，点击页面右上角的 Packages get，下载依赖包； 或运行 flutter packages get
   english_words: ^3.1.0
+  # 获取系统文件
+  path_provider: ^0.4.1
 
 dev_dependencies: # 开发环境依赖的工具包（而不是flutter应用本身依赖的包）。
   flutter_test:

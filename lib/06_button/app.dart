@@ -36,71 +36,72 @@ class _ParentPageState extends State<ParentPage> {
 
       // 主体
       body: new Column(
-        children: [
-          new RaisedButton(
-            child: Text("normal"),
-            onPressed: () => {},
-          ),
-          new FlatButton(
-            child: Text("normal"),
-            onPressed: () => {},
-          ),
-          new OutlineButton(
-            child: Text("normal"),
-            onPressed: () => {},
-          ),
+          children: [
+            new RaisedButton(
+              child: Text("normal"),
+              onPressed: () => {},
+            ),
+            new FlatButton(
+              child: Text("normal"),
+              onPressed: () => {},
+            ),
+            new OutlineButton(
+              child: Text("normal"),
+              onPressed: () => {},
+            ),
 
 
-          new IconButton(
-            icon: Icon(Icons.thumb_up),
-            onPressed: () => {},
-          ),
+            new IconButton(
+              icon: Icon(Icons.thumb_up),
+              onPressed: () => {},
+            ),
 
-          // 纯扁平按钮
-          new FlatButton(
-            color: Colors.blue,
-            highlightColor: Colors.blue[700],
-            colorBrightness: Brightness.dark, // 按钮主题，文字为浅色
-            splashColor: Colors.grey,
-            child: Text("Submit"),
-            shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-            onPressed: () => {},
-          ),
+            // 纯扁平按钮
+            new FlatButton(
+              color: Colors.blue,
+              highlightColor: Colors.blue[700],
+              colorBrightness: Brightness.dark, // 按钮主题，文字为浅色
+              splashColor: Colors.grey,
+              child: Text("Submit"),
+              shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+              onPressed: () => {},
+            ),
 
-          // 带质感以及默认阴影的按钮
-          new RaisedButton(
-            color: Colors.blue,
-            highlightColor: Colors.blue[700],
-            colorBrightness: Brightness.dark, // 按钮主题，文字为浅色
-            splashColor: Colors.grey,
-            child: Text("Submit"),
-            shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-            onPressed: () => {},
-          ),
+            // 带质感以及默认阴影的按钮
+            new RaisedButton(
+              color: Colors.blue,
+              highlightColor: Colors.blue[700],
+              colorBrightness: Brightness.dark, // 按钮主题，文字为浅色
+              splashColor: Colors.grey,
+              child: Text("Submit"),
+              shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+              onPressed: () => {},
+            ),
 
-          // 阴影状态
-          new RaisedButton(
-            color: Colors.blue,
-            highlightColor: Colors.blue[700],
-            colorBrightness: Brightness.dark, // 按钮主题，文字为浅色
-            splashColor: Colors.grey,
-            child: Text("Submit"),
-            shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-            elevation   : 8, //正常状态下的阴影 default 2
-            highlightElevation   : 2, // 按下时的阴影 default 8
-            onPressed: () => {},
-          ),
+            // 阴影状态
+            new RaisedButton(
+              color: Colors.blue,
+              highlightColor: Colors.blue[700],
+              colorBrightness: Brightness.dark, // 按钮主题，文字为浅色
+              splashColor: Colors.grey,
+              child: Text("Submit"),
+              shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+              elevation   : 8, //正常状态下的阴影 default 2
+              highlightElevation   : 2, // 按下时的阴影 default 8
+              onPressed: () => {},
+            ),
 
-          // 没有 onPressed 则为禁用状态
-          new RaisedButton(
-            color: Colors.blue,
-            highlightColor: Colors.blue[700],
-            splashColor: Colors.grey,
-            child: Text("desabed"),
-            shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-            disabledElevation   : 4, //正常状态下的阴影
-          ),
-        ]
+            // 没有 onPressed 则为禁用状态
+            new RaisedButton(
+              color: Colors.blue,
+              highlightColor: Colors.blue[700],
+              splashColor: Colors.grey,
+              child: Text("desabed"),
+              shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+              disabledElevation   : 4, //正常状态下的阴影
+              onPressed: () => {},
+            ),
+          ]
       ),
     );
   }

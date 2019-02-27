@@ -47,31 +47,24 @@ keytool -genkey -v -keystore path/key.jks -keyalg RSA -keysize 2048 -validity
 # 创建 key.properties
 <app dir>/android/key.properties
 
-- - - - - - - - - - - - - - - - - - - - -
-storePassword= # 创建 key.jks 时，输入的密码
-keyPassword= # 同上
-keyAlias=key # 昵称
-storeFile=C:\Users\asus\key.jks # 生成的 key.jks 的路径
-- - - - - - - - - - - - - - - - - - - - -
+    storePassword= # 创建 key.jks 时，输入的密码
+    keyPassword= # 同上
+    keyAlias=key # 昵称
+    storeFile=C:\Users\asus\key.jks # 生成的 key.jks 的路径
 
-# 在gradle中配置签名
+## 在gradle中配置签名
 <app dir>/android/app/build.gradle
 
-# 读取签名
-- - - - - - - - - - - - - - - - - - - - -
-`
-# 在 android{ …… } 配置之前，加入读取 key.properties 的代码
-def keystorePropertiesFile = rootProject.file("key.properties")
-def keystoreProperties = new Properties()
-keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+## 读取签名
+在 android{ …… } 配置之前，加入读取 key.properties 的代码
+    def keystorePropertiesFile = rootProject.file("key.properties")
+    def keystoreProperties = new Properties()
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
-android {
+    android {
 
-`
+## 配置签名
 
-# 配置签名
-
-`
 将
 
     buildTypes {
@@ -98,9 +91,9 @@ android {
             signingConfig signingConfigs.release # 使用 release 配置
         }
     }
-`
 
-# 进入工程根目录
+
+## 进入工程根目录
 运行flutter build apk (flutter build 默认会包含 --release选项).
 
 打包好的发布APK位于<app dir>/build/app/outputs/apk/app-release.apk。

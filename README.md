@@ -59,18 +59,21 @@ storeFile=C:\Users\asus\key.jks # 生成的 key.jks 的路径
 
 # 读取签名
 - - - - - - - - - - - - - - - - - - - - -
+`
 # 在 android{ …… } 配置之前，加入读取 key.properties 的代码
 def keystorePropertiesFile = rootProject.file("key.properties")
 def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
-- - - - - - - - - - - - - - - - - - - - -
+
+`
 
 # 配置签名
 
-- - - - - - - - - - - - - - - - - - - - -
-# 将
+`
+将
+
 buildTypes {
     release {
         // TODO: Add your own signing config for the release build.
@@ -78,7 +81,9 @@ buildTypes {
         signingConfig signingConfigs.debug
     }
 }
-# 替换为
+
+替换为
+
 signingConfigs {
     release {
     # 设置签名信息
@@ -93,7 +98,7 @@ buildTypes {
         signingConfig signingConfigs.release # 使用 release 配置
     }
 }
-- - - - - - - - - - - - - - - - - - - - -
+`
 
 # 进入工程根目录
 运行flutter build apk (flutter build 默认会包含 --release选项).

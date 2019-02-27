@@ -15,6 +15,7 @@
 *.ipr
 *.iws
 .idea/
+*/key.jks
 
 # Visual Studio Code related
 .vscode/

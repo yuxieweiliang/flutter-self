@@ -74,30 +74,30 @@ android {
 `
 将
 
-  buildTypes {
-      release {
-          // TODO: Add your own signing config for the release build.
-          // Signing with the debug keys for now, so `flutter run --release` works.
-          signingConfig signingConfigs.debug
-      }
-  }
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig signingConfigs.debug
+        }
+    }
 
 替换为
 
-  signingConfigs {
-      release {
-      # 设置签名信息
-          keyAlias keystoreProperties['keyAlias']
-          keyPassword keystoreProperties['keyPassword']
-          storeFile file(keystoreProperties['storeFile'])
-          storePassword keystoreProperties['storePassword']
-      }
-  }
-  buildTypes {
-      release {
-          signingConfig signingConfigs.release # 使用 release 配置
-      }
-  }
+    signingConfigs {
+        release {
+        # 设置签名信息
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release # 使用 release 配置
+        }
+    }
 `
 
 # 进入工程根目录

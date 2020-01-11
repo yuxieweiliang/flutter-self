@@ -66,13 +66,13 @@ class _ParentPageState extends State<ParentPage> {
           ),
           new Text(
             'Hello world',
-            style:  TextStyle(
+            style: new TextStyle(
                 color: Colors.blue,
                 fontSize: 18.0,
                 height: 1.2,
                 fontFamily: "Courier",
                 background: new Paint()..color=Colors.yellow,
-                decoration:TextDecoration.underline,
+                decoration: TextDecoration.underline,
                 decorationStyle: TextDecorationStyle.dashed
             ),
           ),

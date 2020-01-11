@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
+/*
+* 这是一个无限加载下拉列表的例子。
+* */
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -77,6 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
         final index = i ~/ 2;
         if(index >= _suggestions.length) {
+
           _suggestions.addAll(generateWordPairs().take(10));
         }
 

@@ -7,6 +7,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       title: 'Flutter Demo',
       home: ThemeTestRoute(),
@@ -34,27 +35,30 @@ class FadeRoute extends PageRoute{
 
   @override
   final Duration transitionDuration;
-
   @override
   final bool opaque;
-
   @override
   final bool barrierDismissible;
-
   @override
   final Color barrierColor;
-
   @override
   final String barrierLabel;
-
   @override
   final bool maintainState;
 
   @override
-  Widget buildPage(BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) => builder(context);
+  Widget buildPage(
+      BuildContext context,
+      Animation<double> animation,
+      Animation<double> secondaryAnimation
+      ) => builder(context);
 
   @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation, Animation<double> secondayAnimation, Widget child) {
+  Widget buildTransitions(
+      BuildContext context,
+      Animation<double> animation,
+      Animation<double> secondayAnimation,
+      Widget child) {
 
     /// 返回不使用动画
     /// 检查当前路由 isActive 是否为 true
@@ -74,9 +78,12 @@ class FadeRoute extends PageRoute{
 
 /// 路由
 /// 使用渐隐渐现风格
-class _ThemeTestRouteState extends State<ThemeTestRoute> with SingleTickerProviderStateMixin {
+class _ThemeTestRouteState extends State<ThemeTestRoute>
+    with SingleTickerProviderStateMixin {
+
   @override
   Widget build(BuildContext context) {
+
     return Column(
       children: <Widget>[
         Text('page a'),

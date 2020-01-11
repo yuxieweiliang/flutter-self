@@ -3,6 +3,23 @@ import 'package:english_words/english_words.dart';
 
 void main() => runApp(MyApp());
 
+/// 第一次运行时：
+/// I/flutter ( 5436): initState
+/// I/flutter ( 5436): didChangeDependencies
+/// I/flutter ( 5436): build
+///
+/// 点击热替换时，代码改动时
+/// I/flutter ( 5436): reassemble #
+/// I/flutter ( 5436): didUpdateWidget
+/// I/flutter ( 5436): build
+///
+/// 移除组件时
+/// I/flutter ( 5436): reassemble
+/// I/flutter ( 5436): deactive # 当State对象从树中被移除时，会调用此回调。
+/// I/flutter ( 5436): dispose # 当State对象从树中被永久移除时调用；通常在此回调中释放资源。
+///
+/// # reassemble是专门为了开发调试而提供的，在热重载(hot reload)时会被调用，此回调在Release模式下永远不会被调用。
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -98,25 +115,6 @@ class _MyHomePageState extends State<MyHomePage> {
     print("didChangeDependencies");
   }
 }
-
-/**
- * 第一次运行时：
- * I/flutter ( 5436): initState
- * I/flutter ( 5436): didChangeDependencies
- * I/flutter ( 5436): build
- *
- * 点击热替换时，代码改动时
- * I/flutter ( 5436): reassemble #
- * I/flutter ( 5436): didUpdateWidget
- * I/flutter ( 5436): build
- *
- * 移除组件时
- * I/flutter ( 5436): reassemble
- * I/flutter ( 5436): deactive # 当State对象从树中被移除时，会调用此回调。
- * I/flutter ( 5436): dispose # 当State对象从树中被永久移除时调用；通常在此回调中释放资源。
- *
- * # reassemble是专门为了开发调试而提供的，在热重载(hot reload)时会被调用，此回调在Release模式下永远不会被调用。
- */
 
 
 

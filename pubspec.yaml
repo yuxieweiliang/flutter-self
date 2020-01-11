@@ -24,6 +24,8 @@ dependencies: # ……的其他包或插件
   english_words: ^3.1.0
   # 获取系统文件
   path_provider: ^0.4.1
+  # loading
+  flutter_spinkit: "^2.1.0"
 
 dev_dependencies: # 开发环境依赖的工具包（而不是flutter应用本身依赖的包）。
   flutter_test:

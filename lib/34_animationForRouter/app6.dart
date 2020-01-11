@@ -65,7 +65,7 @@ class StaggerAnimation extends StatelessWidget  {
   Widget _buildAnimation(BuildContext context, Widget child) {
     return Container(
       alignment: Alignment.bottomCenter,
-      padding:padding.value ,
+      padding: padding.value ,
       child: Container(
         color: color.value,
         width: 50.0,
@@ -126,7 +126,7 @@ class _StaggerDemoState extends State<StaggerDemo> with TickerProviderStateMixin
           width: 300.0,
           height: 300.0,
           decoration: BoxDecoration(
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.black.withOpacity(0.5),
             border: Border.all(
               color:  Colors.black.withOpacity(0.5),
             ),

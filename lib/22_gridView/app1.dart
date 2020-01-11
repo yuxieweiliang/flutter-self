@@ -4,19 +4,20 @@ import 'dart:math' as math;
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  // 这是 application 的 root widget
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: ParentPage(title: 'Row 对齐方式'),
-    );
+    const title = 'Flutter Demo';
+    final theme = new ThemeData(primarySwatch: Colors.blue,);
+    final home = new ParentPage(title: 'Row 对齐方式');
+
+    return MaterialApp( title: title, theme: theme, home: home, );
   }
 }
 
+///
+/// 数据 Widget
+///
 class ParentPage extends StatefulWidget {
   ParentPage({Key key, this.title}) : super(key: key);
 

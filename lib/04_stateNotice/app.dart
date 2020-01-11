@@ -88,6 +88,7 @@ class ChildPageA extends StatelessWidget {
 
   final bool active;
   final ValueChanged<bool> onChanged;
+
   void _handleTap() {
     onChanged(!active);
   }
@@ -95,14 +96,14 @@ class ChildPageA extends StatelessWidget {
   Widget build(BuildContext context) {
     return new GestureDetector(
         onTap: _handleTap,
-      child: new Container(
-        child: new Center(
-          child: new Text(
-              (active ? 'Active' : 'Inactive') + ('（点我）'),
-            style: new TextStyle(fontSize: 32, color: Colors.red)
-          )
+        child: new Container(
+            child: new Center(
+                child: new Text(
+                    (active ? 'Active' : 'Inactive') + ('（点我）'),
+                    style: new TextStyle(fontSize: 32, color: Colors.red)
+                )
+            )
         )
-      )
     );
   }
 }

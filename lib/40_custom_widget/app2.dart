@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 
 class TurnBox extends StatefulWidget {
   const TurnBox({
     Key key,
-    this.turns = .0, //旋转的“圈”数,一圈为360度，如0.25圈即90度
+    this.turns = .0, // 旋转的“圈”数,一圈为360度，如0.25圈即90度
     this.speed = 200, //过渡动画执行的总时长
     this.child
   }) :super(key: key);
@@ -79,8 +80,8 @@ class _TurnBoxRouteState extends State<TurnBoxRoute> {
       child: Column(
         children: <Widget>[
           TurnBox(
-            turns: _turns,
-            speed: 500,
+            turns: .5,
+            speed: 1500,
             child: Icon(Icons.refresh, size: 50, color: Colors.white,),
           ),
           TurnBox(
@@ -95,6 +96,11 @@ class _TurnBoxRouteState extends State<TurnBoxRoute> {
                 _turns += .2;
               });
             },
+          ),
+
+          SpinKitFadingCircle(
+            color: Colors.blueAccent,
+            size: 30.0,
           ),
           RaisedButton(
             child: Text("逆时针旋转1/5圈"),

@@ -66,7 +66,7 @@ class _ParentPageState extends State<ParentPage> {
         children: [
           new Text(
             'ffffffff $_counter',
-            style: Theme.of(context).textTheme.display2,
+            style: Theme.of(context).textTheme.displaySmall,
           ),
           new ChildPageA(active: _activeA, onChanged: _handleTapAChanged),
           new ChildPageB(active: _activeB, onChanged: _handleTapBChanged),

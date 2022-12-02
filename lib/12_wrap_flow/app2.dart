@@ -51,8 +51,6 @@ class _ParentPageState extends State<ParentPage> {
 }
 
 // 暂时不知道 0xec7d 码，所以不成功
-
-// 暂时不知道 0xec7d 码，所以不成功
 class TestFlowDelegate extends FlowDelegate {
   EdgeInsets margin = EdgeInsets.zero;
   TestFlowDelegate({this.margin});

@@ -62,7 +62,7 @@ class _ParentPageState extends State<ParentPage> {
           ),
           new Text(
             'Hello world',
-            style: Theme.of(context).textTheme.display2,
+            style: Theme.of(context).textTheme.displaySmall,
           ),
           new Text(
             'Hello world',

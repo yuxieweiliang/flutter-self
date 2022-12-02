@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // 主体
       body: new Text(
           'ffffffff $_counter',
-        style: Theme.of(context).textTheme.display2,
+        style: Theme.of(context).textTheme.displayMedium,
       ),
 
       // 悬浮按钮

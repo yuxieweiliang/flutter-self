@@ -30,14 +30,23 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
   final _suggestions = <WordPair>[];
 
   final _saved = new Set<WordPair>();
 
   final _biggerFont = const TextStyle(fontSize: 18.0);
 
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    final wordPair = new WordPair.random();
+
     // 页面脚手架
     return Scaffold(
       // 标题
@@ -51,6 +60,12 @@ class _MyHomePageState extends State<MyHomePage> {
       // 主体
       body: _buildSuggestions(),
 
+      // 悬浮按钮
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 
@@ -69,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
           _suggestions.addAll(generateWordPairs().take(10));
         }
 
-        print('$index $_suggestions[index] $i');
+        print('$index $_suggestions[index]');
         return _buildRow(_suggestions[index]);
       },
     );

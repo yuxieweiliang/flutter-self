@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 /// https://flutterchina.club/widgets-intro/
 void main() => runApp(MyApp());
 
-
-
 class Person {
   String data;
   int age;
@@ -32,7 +30,7 @@ class Worker extends Person {
   }
 
   @override //告诉编译器和程序员他是一个重写覆盖父类的方法
-  void sayhi() {
+  void sayHi() {
     super.sayhi(); //表示调用父类的sayhi方法
     print('my salary is $salary');
   }
@@ -42,12 +40,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var woker = new Worker(1, 'xx', 2);
-    woker.sayhi();
+    woker.sayHi();
 
-    return  Container(
+    return Container(
+      /// Edge: 边缘
         margin: EdgeInsets.only(top: 5.0, left: 120.0), // 容器外补白
+        /// constraints: 约束
         constraints: BoxConstraints.tightFor(width: 300.0, height: 600.0), // 卡片大小
-        decoration: BoxDecoration(//背景装饰
+        /// 背景装饰
+        decoration: BoxDecoration(
             gradient: RadialGradient( //背景径向渐变
                 colors: [Colors.red, Colors.orange],
                 center: Alignment.topLeft,
